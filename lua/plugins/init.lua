@@ -9,6 +9,33 @@ return {
       vim.cmd("colorscheme rose-pine")
     end,
   },
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    build = ":Copilot auth",
+    enabled = true,
+    event = "InsertEnter",
+    opts = {
+      suggestion = { enabled = false },
+      panel = { enabled = false },
+    },
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    dependencies = "copilot.lua",
+    opts = {},
+    config = function(_, opts)
+      local copilot_cmp = require("copilot_cmp")
+      copilot_cmp.setup(opts)
+      -- attach cmp source whenever copilot attaches
+      -- fixes lazy-loading issues with the copilot cmp source
+      require("lazyvim.util").on_attach(function(client)
+        if client.name == "copilot" then
+          copilot_cmp._on_insert_enter()
+        end
+      end)
+    end,
+  },
   -- Use <tab> for completion and snippets (supertab)
   -- first: disable default <tab> and <s-tab> behavior in LuaSnip
   {
@@ -17,7 +44,6 @@ return {
       return {}
     end,
   },
-  -- then: setup supertab in cmp
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
@@ -35,6 +61,11 @@ return {
       local cmp = require("cmp")
 
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
+        ["<CR>"] = cmp.mapping.confirm({
+          -- this is the important line
+          behavior = cmp.ConfirmBehavior.Replace,
+          select = false,
+        }),
         ["<Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_next_item()
@@ -58,6 +89,14 @@ return {
           end
         end, { "i", "s" }),
       })
+
+      opts.sources = cmp.config.sources({
+        { name = "copilot", group_index = 2 },
+        { name = "nvim_lsp", group_index = 2 },
+        { name = "luasnip", group_index = 2 },
+        { name = "buffer", group_index = 2 },
+        { name = "path", group_index = 2 },
+      })
     end,
   },
   {
@@ -79,5 +118,23 @@ return {
       table.insert(opts.sources, nls.builtins.formatting.black)
     end,
   },
-  { import = "lazyvim.plugins.extras.ui.mini-starter" },
+  {
+    "telescope.nvim",
+    keys = {
+      {
+        "<leader>sg",
+        function()
+          require("telescope").extensions.live_grep_args.live_grep_args()
+        end,
+        desc = "Extended search with grep",
+      },
+    },
+    dependencies = {
+      "nvim-telescope/telescope-live-grep-args.nvim",
+      -- build = "make",
+      config = function()
+        require("telescope").load_extension("live_grep_args")
+      end,
+    },
+  },
 }
