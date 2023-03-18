@@ -79,4 +79,5 @@ return {
       table.insert(opts.sources, nls.builtins.formatting.black)
     end,
   },
+  { import = "lazyvim.plugins.extras.ui.mini-starter" },
 }
