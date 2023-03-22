@@ -1,5 +1,4 @@
 return {
-  { "echasnovski/mini.pairs", enabled = false },
   {
     "rose-pine/neovim",
     name = "rose-pine",
