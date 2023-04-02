@@ -1,13 +1,11 @@
 return {
   {
-    "luisiacc/gruvbox-baby",
-    name = "gruvbox-baby",
-    lazy = false,
-    priority = 1000,
+    "olivercederborg/poimandres.nvim",
+    name = "poimandres",
     config = function()
-      vim.g.gruvbox_baby_background_color = "dark"
+      require("poimandres").setup({})
 
-      vim.cmd("colorscheme gruvbox-baby")
+      vim.cmd("colorscheme poimandres")
     end,
   },
   {
