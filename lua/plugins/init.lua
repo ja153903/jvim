@@ -1,14 +1,5 @@
 return {
   {
-    "olivercederborg/poimandres.nvim",
-    name = "poimandres",
-    config = function()
-      require("poimandres").setup({})
-
-      vim.cmd("colorscheme poimandres")
-    end,
-  },
-  {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
     build = ":Copilot auth",
