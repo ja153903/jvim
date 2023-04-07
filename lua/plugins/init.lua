@@ -7,7 +7,7 @@ return {
     event = "InsertEnter",
     opts = {
       suggestion = { enabled = false },
-      panel = { enabled = true, auto_refresh = true },
+      panel = { enabled = false },
     },
   },
   {
