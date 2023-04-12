@@ -9,6 +9,7 @@ return {
         "rust-analyzer",
         "typescript-language-server",
         "clangd",
+        "eslint_d",
       },
     },
   },
@@ -18,6 +19,7 @@ return {
       local nls = require("null-ls")
       table.insert(opts.sources, nls.builtins.formatting.black)
       table.insert(opts.sources, nls.builtins.formatting.prettierd)
+      table.insert(opts.sources, nls.builtins.diagnostics.eslint_d)
       -- table.insert(opts.sources, nls.builtins.diagnostics.cppcheck)
       -- table.insert(opts.sources, nls.builtins.diagnostics.cpplint)
     end,
@@ -166,7 +168,7 @@ return {
             },
           },
           lualine_y = {
-            { "progress", separator = " ", padding = { left = 1, right = 0 } },
+            { "progress", separator = " ",                  padding = { left = 1, right = 0 } },
             { "location", padding = { left = 0, right = 1 } },
           },
           lualine_z = {
