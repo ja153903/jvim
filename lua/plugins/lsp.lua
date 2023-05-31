@@ -10,6 +10,7 @@ return {
         "typescript-language-server",
         "clangd",
         "eslint_d",
+        "ocaml-lsp",
       },
     },
   },
