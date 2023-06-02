@@ -1,17 +1,9 @@
 return {
-  {
-    "olimorris/onedarkpro.nvim",
-    priority = 1000,
-  },
-  {
-    "projekt0n/github-nvim-theme",
-    lazy = false, -- make sure we load this during startup if it is your main colorscheme
-    priority = 1000, -- make sure to load this before all the other start plugins
-  },
+  { "EdenEast/nightfox.nvim", priority = 1000 },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = { "github_dark" },
+      colorscheme = { "nordfox" },
     },
   },
 }
