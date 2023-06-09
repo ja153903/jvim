@@ -1,5 +1,5 @@
 return {
-  { "luisiacc/gruvbox-baby", lazy = false, priority = 1000 },
+  { "ellisonleao/gruvbox.nvim", priority = 1000 },
   {
     "AlexvZyl/nordic.nvim",
     config = function()
@@ -59,7 +59,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = { "gruvbox-baby" },
+      colorscheme = { "gruvbox" },
     },
   },
 }
