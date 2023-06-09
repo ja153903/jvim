@@ -1,8 +1,7 @@
 return {
+  { "luisiacc/gruvbox-baby", lazy = false, priority = 1000 },
   {
     "AlexvZyl/nordic.nvim",
-    lazy = false,
-    priority = 1000,
     config = function()
       require("nordic").setup({
         -- Available themes: 'nordic', 'onedark'.
@@ -54,13 +53,13 @@ return {
           dim_backdrop = false,
         },
       })
-      require("nordic").load()
+      -- require("nordic").load()
     end,
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = { "nordic" },
+      colorscheme = { "gruvbox-baby" },
     },
   },
 }
