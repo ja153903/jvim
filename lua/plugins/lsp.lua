@@ -8,6 +8,8 @@ return {
         "pyright",
         "typescript-language-server",
         "eslint_d",
+        "rust-analyzer",
+        "rustfmt",
       },
     },
   },
