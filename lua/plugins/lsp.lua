@@ -9,7 +9,6 @@ return {
         "typescript-language-server",
         "eslint_d",
         "rust-analyzer",
-        "rustfmt",
         "haskell-language-server",
       },
     },
