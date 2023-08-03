@@ -6,7 +6,7 @@ return {
     priority = 1000,
     config = function()
       require("rose-pine").setup({
-        disable_italics = true,
+        -- disable_italics = true,
       })
     end,
   },
