@@ -10,6 +10,7 @@ return {
         "eslint_d",
         "rust-analyzer",
         "haskell-language-server",
+        "clangd",
       },
     },
   },
