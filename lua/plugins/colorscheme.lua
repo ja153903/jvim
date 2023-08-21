@@ -10,10 +10,11 @@ return {
       })
     end,
   },
+  { "sainnhe/sonokai", priority = 1000 },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "rose-pine-moon",
+      colorscheme = "sonokai",
     },
   },
 }
