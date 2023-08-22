@@ -11,6 +11,7 @@ return {
         "rust-analyzer",
         "haskell-language-server",
         "clangd",
+        "ruff-lsp",
       },
     },
   },
