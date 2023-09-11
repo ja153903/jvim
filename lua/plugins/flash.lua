@@ -3,7 +3,7 @@ if vim.g.vscode then
     {
       "folke/flash.nvim",
       event = "VeryLazy",
-      vscode = false,
+      vscode = true,
       ---@type Flash.Config
       opts = {},
   -- stylua: ignore
