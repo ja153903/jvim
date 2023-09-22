@@ -9,10 +9,11 @@ return {
     end,
   },
   { "sainnhe/sonokai" },
+  { "luisiacc/gruvbox-baby" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-macchiato",
+      colorscheme = "gruvbox-baby",
     },
   },
 }
