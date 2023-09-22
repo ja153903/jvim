@@ -8,8 +8,7 @@ return {
       })
     end,
   },
-  { "sainnhe/sonokai" },
-  { "luisiacc/gruvbox-baby" },
+  { "ja153903/gruvbox-baby" },
   {
     "LazyVim/LazyVim",
     opts = {
