@@ -2,8 +2,6 @@ return {
   {
     "rose-pine/neovim",
     name = "rose-pine",
-    lazy = false,
-    priority = 1000,
     config = function()
       require("rose-pine").setup({
         variant = "moon",
@@ -23,7 +21,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "rose-pine",
+      colorscheme = "catppuccin-macchiato",
     },
   },
 }
