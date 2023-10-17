@@ -12,6 +12,7 @@ return {
         "clangd",
         "ruff-lsp",
         "ruff",
+        "pylyzer",
       },
     },
   },
