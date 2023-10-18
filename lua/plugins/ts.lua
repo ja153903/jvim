@@ -2,7 +2,7 @@ return {
   {
     "nvim-treesitter/nvim-treesitter-context",
     event = "LazyFile",
-    enabled = false,
+    enabled = true,
     opts = { mode = "cursor" },
     keys = {
       {
