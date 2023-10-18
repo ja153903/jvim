@@ -12,7 +12,7 @@ return {
         "clangd",
         "ruff",
         "ruff-lsp",
-        "python-lsp-server",
+        "pyright",
       },
     },
   },
