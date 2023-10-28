@@ -4,7 +4,6 @@ return {
     opts = {
       ensure_installed = {
         "prettierd",
-        "black",
         "typescript-language-server",
         "eslint_d",
         "rust-analyzer",
