@@ -16,7 +16,7 @@ return {
           javascriptreact = { "prettierd", "eslint_d" },
           typescript = { "prettierd", "eslint_d" },
           typescriptreact = { "prettierd", "eslint_d" },
-          python = { "isort", "black" },
+          python = { "ruff_fix", "ruff_format" },
         },
         -- LazyVim will merge the options you set here with builtin formatters.
         -- You can also define any custom formatters here.
