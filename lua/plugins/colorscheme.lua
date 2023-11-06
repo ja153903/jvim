@@ -1,8 +1,8 @@
 return {
   {
     "rose-pine/neovim",
-    lazy = false,
-    priority = 1000,
+    -- lazy = false,
+    -- priority = 1000,
     name = "rose-pine",
     config = function()
       require("rose-pine").setup({
@@ -13,8 +13,8 @@ return {
   },
   {
     "rebelot/kanagawa.nvim",
-    -- lazy = false,
-    -- priority = 1000,
+    lazy = false,
+    priority = 1000,
     config = function()
       require("kanagawa").setup({
         compile = false, -- enable compiling the colorscheme
@@ -45,7 +45,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "rose-pine",
+      colorscheme = "kanagawa",
     },
   },
 }
