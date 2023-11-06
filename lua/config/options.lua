@@ -3,4 +3,5 @@
 -- Add any additional options here
 
 vim.opt.swapfile = false
+vim.opt.cursorline = true
 vim.api.nvim_create_user_command("CopyRelPath", "call setreg('+', expand('%'))", {})

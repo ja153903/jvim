@@ -44,8 +44,8 @@ return {
   },
   {
     "ellisonleao/gruvbox.nvim",
-    priority = 1000,
-    lazy = true,
+    -- priority = 1000,
+    -- lazy = true,
     config = function()
       require("gruvbox").setup({
         terminal_colors = true, -- add neovim terminal colors
@@ -74,9 +74,19 @@ return {
     end,
   },
   {
+    "navarasu/onedark.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("onedark").setup({
+        style = "darker",
+      })
+    end,
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "onedark",
     },
   },
 }
