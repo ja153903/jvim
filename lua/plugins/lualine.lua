@@ -3,7 +3,7 @@ return {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
     opts = function()
-      local icons = require("lazyvim.config").icons
+      -- local icons = require("lazyvim.config").icons
 
       local function fg(name)
         return function()
@@ -21,24 +21,15 @@ return {
         },
         sections = {
           lualine_a = { "mode" },
-          lualine_b = { "branch" },
+          lualine_b = { { "branch", icons_enabled = false } },
           lualine_c = {
             {
               "diagnostics",
               symbols = {
-                error = icons.diagnostics.Error,
-                warn = icons.diagnostics.Warn,
-                info = icons.diagnostics.Info,
-                hint = icons.diagnostics.Hint,
-              },
-            },
-            {
-              "filetype",
-              icon_only = true,
-              separator = "",
-              padding = {
-                left = 1,
-                right = 0,
+                error = "err: ",
+                warn = "warn: ",
+                info = "info: ",
+                hint = "hint: ",
               },
             },
             { "filename", path = 1, symbols = { modified = "  ", readonly = "", unnamed = "" } },
@@ -65,11 +56,6 @@ return {
             { require("lazy.status").updates, cond = require("lazy.status").has_updates, color = fg("Special") },
             {
               "diff",
-              symbols = {
-                added = icons.git.added,
-                modified = icons.git.modified,
-                removed = icons.git.removed,
-              },
             },
           },
           lualine_y = {
@@ -78,7 +64,7 @@ return {
           },
           lualine_z = {
             function()
-              return "  " .. os.date("%R")
+              return os.date("%R")
             end,
           },
         },
