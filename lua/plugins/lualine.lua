@@ -8,6 +8,7 @@ return {
       local function fg(name)
         return function()
           ---@type {foreground?:number}?
+          ---@diagnostic disable-next-line: undefined-field
           local hl = vim.api.nvim_get_hl_by_name(name, true)
           return hl and hl.foreground and { fg = string.format("#%06x", hl.foreground) }
         end
