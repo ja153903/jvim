@@ -1,8 +1,6 @@
 return {
   {
     "rose-pine/neovim",
-    -- lazy = false,
-    -- priority = 1000,
     name = "rose-pine",
     config = function()
       require("rose-pine").setup({
@@ -13,8 +11,6 @@ return {
   },
   {
     "rebelot/kanagawa.nvim",
-    -- lazy = false,
-    -- priority = 1000,
     config = function()
       require("kanagawa").setup({
         compile = false, -- enable compiling the colorscheme
@@ -44,8 +40,6 @@ return {
   },
   {
     "ellisonleao/gruvbox.nvim",
-    -- priority = 1000,
-    -- lazy = true,
     config = function()
       require("gruvbox").setup({
         terminal_colors = true, -- add neovim terminal colors
