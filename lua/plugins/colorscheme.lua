@@ -69,18 +69,23 @@ return {
   },
   {
     "navarasu/onedark.nvim",
-    lazy = false,
-    priority = 1000,
+    -- lazy = false,
+    -- priority = 1000,
     config = function()
       require("onedark").setup({
-        style = "darker",
+        style = "deep",
+        transparent = true,
+        lualine = {
+          transparent = true,
+        },
       })
     end,
   },
+  { "ishan9299/nvim-solarized-lua", name = "solarized", lazy = false, priority = 1000 },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "onedark",
+      colorscheme = "solarized",
     },
   },
 }
