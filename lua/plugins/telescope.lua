@@ -17,20 +17,5 @@ return {
         require("telescope").load_extension("live_grep_args")
       end,
     },
-    config = function()
-      require("telescope").setup({
-        pickers = {
-          find_files = {
-            disable_devicons = true,
-          },
-          live_grep = {
-            disable_devicons = true,
-          },
-          git_files = {
-            disable_devicons = true,
-          },
-        },
-      })
-    end,
   },
 }
