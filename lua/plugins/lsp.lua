@@ -12,6 +12,7 @@ return {
         "ruff",
         "ruff-lsp",
         "pyright",
+        "elixir-ls",
       },
     },
   },

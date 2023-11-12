@@ -1,18 +1,20 @@
 return {
   {
     "rose-pine/neovim",
-    lazy = false,
-    priority = 1000,
+    -- lazy = false,
+    -- priority = 1000,
     name = "rose-pine",
     config = function()
       require("rose-pine").setup({
-        variant = "main",
+        variant = "moon",
         disable_italics = true,
       })
     end,
   },
   {
     "rebelot/kanagawa.nvim",
+    -- lazy = false,
+    -- priority = 1000,
     config = function()
       require("kanagawa").setup({
         compile = false, -- enable compiling the colorscheme
@@ -88,10 +90,11 @@ return {
     -- lazy = false,
     -- priority = 1000,
   },
+  { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "rose-pine",
+      colorscheme = "moonfly",
     },
   },
 }
