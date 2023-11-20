@@ -12,7 +12,10 @@ return {
   {
     "ja153903/solarized-kyoto",
     lazy = false,
-    priority = 1000
+    priority = 1000,
+    config = function()
+      vim.g.solarized_italics = 0
+    end
   },
   {
     "LazyVim/LazyVim",
