@@ -3,7 +3,7 @@ return {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
     opts = function()
-      -- local icons = require("lazyvim.config").icons
+      local icons = require("lazyvim.config").icons
 
       local function fg(name)
         return function()
@@ -27,10 +27,10 @@ return {
             {
               "diagnostics",
               symbols = {
-                error = "err: ",
-                warn = "warn: ",
-                info = "info: ",
-                hint = "hint: ",
+                error = icons.diagnostics.Error,
+                warn = icons.diagnostics.Warn,
+                info = icons.diagnostics.Info,
+                hint = icons.diagnostics.Hint,
               },
             },
             { "filename", path = 1, symbols = { modified = "  ", readonly = "", unnamed = "" } },
